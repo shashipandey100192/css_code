@@ -1,0 +1,47 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+.page
+{
+    width:1200px;
+    height: 200px;
+    margin-top:10px;
+    border:1px solid blue;
+    display: flex;
+}
+.page>section
+{
+    border:1px solid red;
+    padding:5px;
+    flex:1;
+    margin:5px;
+}
+.second
+{
+    height: 100px;
+}
+.menu
+{
+    flex:3 !important;
+}
+
+.gallery
+{
+    width:1200px;
+    height: auto;
+    border:1px solid red;
+    margin-top:30px;
+    display: flex;
+    flex-wrap: wrap;
+        justify-content: space-evenly;
+}
+.gallery>section
+{
+    border:1px solid green;
+    padding:10px;
+    width:250px;
+    height: 250px;
+    margin:5px;
+}
