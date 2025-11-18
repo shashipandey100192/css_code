@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+<script>
+    function abc()
+    {   
+        var ele = document.createElement("div");
+        document.body.appendChild(ele);
+        // ele.innerHTML="this is my text";
+        var mytext= document.createTextNode("this is my dyn text");
+            ele.appendChild(mytext);
+            ele.addEventListener("click",()=>{
+                alert('welcome to dyn element');
+                ele.setAttribute("id","first");
+            })
+    
+    }
+
+    abc();
+
+var age=50;
+   var content = `s fjsdghfhgsdhf
+    gsdhghsdgfhs dgfhsgdfhgsd
+     hfgsdjh ${age} gshghsddgf`;
+    console.log(content)
+
+
+
+</script>
+</body>
+</html>

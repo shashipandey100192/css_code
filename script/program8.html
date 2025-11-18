@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resignation Letter</title>
+  <style>
+    *
+    {
+        margin:0 auto;
+        padding:0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .header {
+      margin-bottom: 30px;
+    }
+    .header p {
+      margin: 0;
+    }
+    .signature {
+      margin-top: 40px;
+    }
+    .page
+    {
+        width:1000px;
+        box-shadow:5px 5px 10px black;
+        padding:50px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+ 
+  </div>
+
+
+<script>
+    var name,sign,state,email,number;
+    name =prompt("enter sname");
+    sign =prompt("enter sing");
+    state =prompt("enter state");
+    email =prompt("enter email");
+    number =prompt("enter phone");
+
+    var jpage = document.getElementsByClassName('page');
+        jpage[0].innerHTML=`
+         <div class="header">
+    <p>[${name}]</p>
+    <p>[Your Job Title]</p>
+    <p>[Your Address]</p>
+    <p>[City, ${state}, ZIP]</p>
+    <p>Email: [${email}]</p>
+    <p>Phone: [${number}]</p>
+
+    <p style="margin-top:20px;">[Date]</p>
+
+    <p>[${name}]</p>
+    <p>[Manager’s Job Title]</p>
+    <p>[Company Name]</p>
+    <p>[Company Address]</p>
+    <p>[City, State, ZIP]</p>
+  </div>
+
+  <p>Dear [Manager’s Name],</p>
+
+  <p>Please accept this letter as formal notification of my resignation from my position as <strong>[Your Job Title]</strong> at <strong>[Company Name]</strong>, effective <strong>[Last Working Day]</strong>.</p>
+
+  <p>I am grateful for the opportunities I have had at [Company Name]. During my time here, I have appreciated the chance to work with a dedicated team and to develop my skills in [mention relevant skills or experiences if you wish]. I will do my best to ensure a smooth and efficient handover of my responsibilities before my departure.</p>
+
+  <p>Thank you for your leadership and support during my tenure. I wish the company and the team continued success in the future.</p>
+
+  <p>Sincerely,</p>
+
+  <div class="signature">
+    <p>[Your ${name}]</p>
+  </div>
+        `;
+
+
+</script>
+
+</body>
+</html>

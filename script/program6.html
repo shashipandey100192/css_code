@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1 title="myheading">heading</h1>
+    <div>this is my content</div>
+
+<input type="text">
+<p>this is text</p>
+
+    
+<script>
+
+    var myobj = document.querySelectorAll("h1,div,input,p");
+    console.log(myobj);
+
+    myobj[2].setAttribute("title","username");
+
+    myobj[2].addEventListener("input",()=>{
+        var a = myobj[2].value;
+            console.log(a);
+            if(a=="password")
+            {
+                myobj[2].setAttribute("type","password");
+            }
+            else if(a=="size")
+            {
+                 myobj[2].setAttribute("size","80");
+            }
+            else
+            {
+                 myobj[2].setAttribute("type","text");
+            }
+    });
+</script>
+
+
+</body>
+</html>
