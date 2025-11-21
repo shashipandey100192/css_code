@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1></h1>
+    <input type="button" value="booking start" disabled onclick="mybooking()">
+
+<script>
+
+// var a = alert();
+// var a =parseInt();
+// var b = new Date();
+// console.log(a);
+// console.log(typeof(a));
+
+// console.log(b);
+// console.log(typeof(b));
+
+function abc()
+{
+    var btn = document.querySelectorAll("input");
+    var heading = document.querySelector('h1');
+    var mydate = new Date();
+    var h = mydate.getHours();
+    var m = mydate.getMinutes();
+    var s = mydate.getSeconds();
+    var mytime =`Current Time: ${h}:${m}:${s}`;
+    heading.innerHTML=mytime;
+    if(h>=18 && m==54 && s>=0)
+{
+    btn[0].removeAttribute("disabled");
+}
+else
+{
+     btn[0].setAttribute("disabled","disabled");
+}
+
+}
+abc();
+
+setInterval("abc()",1000);
+function mybooking()
+{
+    alert("welcome to bookinbg");
+}
+
+</script>
+
+</body>
+</html>

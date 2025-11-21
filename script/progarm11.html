@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .theam1
+        {
+            background-color: orange;
+            color:white;
+        }
+        .theam1 h1
+        {
+            font-size: 50px;
+            color:red;
+        }
+
+        .theam2
+        {
+            background-color: rgb(57, 254, 47);
+            color:rgb(247, 0, 161);
+        }
+        .theam2 h1
+        {
+            font-size: 30px;
+            color:white;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+         .theam3
+        {
+            background-color: rgb(0, 0, 0);
+            color:rgb(255, 255, 255);
+        }
+        .theam3 h1
+        {
+            font-size: 20px;
+            color:yellow;
+            text-align: center;
+            text-transform: capitalize;
+            font-family: arial black;
+            letter-spacing: 10px;
+        }
+
+    </style>
+</head>
+<body onresize="abc()">
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+
+    <script>
+        function abc()
+        {
+            var jbody = document.querySelector("body");
+        var a = screen;
+        console.log(a);
+        var heading = document.querySelectorAll("h1");
+        heading[0].innerHTML=`
+                screen width:${a.width} <br> 
+                screen height :${a.height} <br>
+                screen Type :${a.orientation.type}
+                `;
+
+        if(a.width>=1200)
+        {
+            jbody.className="theam1";
+        }
+        else if(a.width>=900)
+        {
+            jbody.className="theam2";
+        }
+        else
+        {
+            jbody.className="theam3";
+        }
+    }
+
+    abc();
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

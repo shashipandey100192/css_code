@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount+Ink:wght@100..900&family=Comic+Relief:wght@400;700&family=Concert+One&family=Condiment&family=Michroma&family=Permanent+Marker&family=Potta+One&display=swap');
+</style>
+<style>
+h1{
+    font-family: "Bitcount Grid Double", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+    font-size: 80px;
+    letter-spacing: 10px;
+}
+
+
+</style>
+</head>
+<body>
+
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+    <script>
+        function abc()
+        {
+            var hd = document.querySelectorAll("h1");
+            var mycap = parseInt((Math.random()+1)*4561);
+            console.log(mycap); 
+            hd[0].innerHTML=mycap;
+            var c,gcap;
+            if(mycap>=8000)
+        {
+            c="R";
+        }
+        else if(mycap>=7000)
+        {
+            c="P";
+        }
+        else if(mycap>=6000)
+        {
+            c="u";
+        }
+        else
+        {
+            c="X";
+        }
+        gcap = mycap+c;
+        hd[1].innerHTML=gcap;
+        var rcap;
+        if(mycap>=6000)
+        {
+            rcap = mycap+c;
+        }
+        else
+        {
+            rcap = c+mycap;
+        }
+        hd[2].innerHTML=rcap;
+        
+        var myformat =new String(rcap);
+        console.log(myformat);
+        var x = myformat[0];
+        hd[3].innerHTML=x;
+        hd[3].style.color="red";
+
+
+
+        }
+
+        abc();
+
+    </script>
+    
+</body>
+</html>
