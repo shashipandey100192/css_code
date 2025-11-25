@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 70px;
+            letter-spacing: 10px;
+            font-family: arial;
+        }
+
+        input {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1></h1>
+    <div>
+        <input type="text" placeholder="inter cap" maxlength="4">
+        <input type="button" value="varify" disabled>
+    </div>
+
+    <script>
+
+
+        var jh, jinput;
+        function capg() {
+            jinput = document.querySelectorAll("input");
+            jh = document.querySelector("h1");
+            var a = parseInt((Math.random() + 1) * 4652);
+            console.log(jinput);
+            jh.innerHTML = a;
+
+            var b;
+            jinput[0].addEventListener("input", () => {
+                b = jinput[0].value;
+                if (b.length > 0) {
+                    jinput[1].removeAttribute("disabled");
+                }
+                else {
+                    jinput[1].setAttribute("disabled", "disabled");
+                }
+            });
+
+            jinput[1].addEventListener("click", () => {
+                if (b == a) {
+                    alert("welocome to login");
+                    setTimeout(()=>{
+                        window.location.href="http://google.com";
+                    },3000);
+                }
+                else {
+                    alert("your captch worng");
+                    jinput[0].value="";
+                    jinput[0].focus();
+                   
+
+                }
+            })
+
+
+
+
+        }
+
+
+
+
+
+
+
+        capg();
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+    </style>
+    <style>
+        h1 {
+            font-size: 70px;
+            letter-spacing: 10px;
+            font-family: arial;
+        }
+
+        input {
+            padding: 10px;
+            width: 30px;
+            font-size: 50px;
+            text-align: center;
+        }
+        #abc
+        {
+            font-size: 50px;
+            display: inline-block;
+        }
+        div{
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1></h1>
+    <div class="area">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+    </div>
+    <div id="abc"></div>
+
+    <script>
+
+        var jh, jinput, jcap, a, mycap;
+
+        function gcap() {
+            a = parseInt((Math.random() + 1) * 4652);
+        }
+        gcap();
+
+        function loadelements() {
+            jinput = document.querySelector(".area").children;
+            console.log(jinput);
+            jh = document.querySelector("h1");
+            jh.innerHTML = a;
+        }
+        loadelements();
+
+        jinput[0].addEventListener("input", () => {
+            varifys();
+            jinput[1].focus();
+        })
+
+        jinput[1].addEventListener("input", () => {
+            jinput[2].focus();
+            varifys()
+        })
+
+        jinput[2].addEventListener("input", () => {
+            jinput[3].focus();
+            varifys()
+        });
+
+        jinput[3].addEventListener("input", () => {
+
+            varifys()
+        })
+
+        function varifys() {
+            mycap = `${jinput[0].value}${jinput[1].value}${jinput[2].value}${jinput[3].value}`;
+            var mycon = document.getElementById("abc");
+            console.log(mycap)
+            if (mycap == a) {
+               mycon.innerHTML=`<i class="fa fa-check" aria-hidden="true"></i>`;
+               setTimeout(()=>{
+                window.location.href="http://google.com";
+               },3000)
+            }
+            else
+            {
+                 mycon.innerHTML=`<i class="fa fa-times" aria-hidden="true"></i>`;
+            }
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
