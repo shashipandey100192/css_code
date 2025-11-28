@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="one" type="text">
+    <input type="button" value="adddata" onclick="addrecord()">
+    <hr>
+
+    <input type="text" id="user"><br>
+    <input type="email" id="email"><br>
+    <input type="text" id="phone">
+    <button type="button" value="adduser" onclick="adduser()">addusers</button>
+
+
+    <script>
+        var course = [];
+        var userinfo = [];
+
+        function addrecord() {
+            var mydata = document.getElementById('one');
+            //  course.unshift(mydata.value);
+            course.push(mydata.value);
+            console.log(course);
+        }
+
+
+        function adduser() {
+            var user, email, phone;
+            user = document.getElementById("user");
+            email = document.getElementById("email");
+            phone = document.getElementById("phone");
+
+            userinfo.push({
+                uname: user.value,
+                uemail: email.value,
+                uphone: phone.value
+            });
+            console.log(userinfo);
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+
