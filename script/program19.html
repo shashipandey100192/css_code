@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        input,
+        button {
+            margin: 5px;
+            padding: 5px
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><input type="text" placeholder="username"></li>
+        <li><input type="text" placeholder="email"></li>
+        <li><input type="date"></li>
+        <li><button type="button" onclick="myusers()">submit</button></li>
+    </ul>
+
+
+    <script>
+        var userlist = [];
+        function myusers() {
+            var a = document.querySelectorAll('input');
+            userlist.unshift({
+                user: a[0].value,
+                email: a[1].value,
+                dob: a[2].value
+            });
+            console.log(userlist);
+            localStorage.setItem("mylocal",JSON.stringify(userlist));
+            sessionStorage.setItem("mysession",JSON.stringify(userlist));
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
