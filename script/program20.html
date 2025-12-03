@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        input,
+        button {
+            margin: 5px;
+            padding: 5px
+        }
+        .cards
+        {
+            width:100%;
+            height: auto;
+            border:1px solid red;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .cards section
+        {
+            background-color: green;
+            padding:10px;
+            margin:10px;
+            color:white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px black;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><input type="text" placeholder="username"></li>
+        <li><input type="text" placeholder="email"></li>
+        <li><input type="date"></li>
+        <li><button type="button" onclick="myusers()">submit</button></li>
+    </ul>
+<hr>
+<input type="button" value="get local data" onclick="getlocaldata()">
+Filter data:<input type="search" id="mysearch">
+<div class="cards">
+    
+</div>
+
+
+    <script>
+        var userlist = [];
+        function myusers() {
+            var a = document.querySelectorAll('input');
+            userlist.unshift({
+                user: a[0].value,
+                email: a[1].value,
+                dob: a[2].value
+            });
+            console.log(userlist);
+            localStorage.setItem("mylocal",JSON.stringify(userlist));
+            sessionStorage.setItem("mysession",JSON.stringify(userlist));
+            getlocaldata();
+        }
+
+var jsearch;
+function getlocaldata()
+{
+
+    var jcard = document.querySelector(".cards");
+    var localdata = JSON.parse(localStorage.getItem("mylocal"));
+    console.log(localdata);
+    console.log(typeof(localdata));
+
+    var mytemp = localdata.map((c)=>{
+        return ` <section>
+        <h1>${c.user}</h1>
+        <h3>${c.email}</h3>
+        <h3>${c.dob}</h3>
+    </section>`;
+    });
+    jcard.innerHTML=mytemp.join("");
+
+    // jcard.innerHTML=`${localdata.length==0? "data not found" :"data map"}`;
+
+jsearch = document.getElementById("mysearch");
+jsearch.addEventListener("input",()=>{
+    jcard.innerHTML="";
+    var a = jsearch.value;
+    console.log(a);
+    var myfilterdata =localdata.filter((e)=>{
+        return e.user==a
+    });
+    console.log(myfilterdata);
+
+     var xyz = myfilterdata.map((c)=>{
+        return ` <section>
+        <h1>${c.user}</h1>
+        <h3>${c.email}</h3>
+        <h3>${c.dob}</h3>
+    </section>`;
+    });
+    jcard.innerHTML=xyz.join("");
+
+
+
+})
+
+
+}
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
