@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0 auto;
+            padding:0;
+        }
+        div
+        {
+            width:1200px;
+            height: 500px;
+            background-color: aquamarine;
+            margin-top:5px;
+        }
+         section
+        {
+            width:1200px;
+            height: 100px;
+            background-color: rgb(64, 39, 253);
+            margin-top:5px;
+        }
+        .abc
+        {
+            position:fixed;
+            background-color: orange;
+            border-bottom:5px solid blue;
+            top:0;
+            font-size: 50px;
+        }
+        header
+        {
+            width:0px;
+            height: 50px;
+            background-color: orange;
+            position: fixed;
+            top:200px;
+        }
+    </style>
+</head>
+<body onscroll="pagescroll()">
+    <header> heading</header>
+<div></div>
+<div></div>
+<section></section>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+
+<script>
+function pagescroll()
+{
+    var a = window.scrollY;
+    console.log(a);
+    var jsection = document.querySelector("section");
+    var jheader = document.querySelector("header");
+     jheader.style.width=`${a}px`;
+    if(a>=1100)
+{
+    jsection.classList.add("abc");
+    jsection.innerHTML = a;
+   
+
+}
+else
+{
+    jsection.classList.remove("abc");
+}
+
+}
+
+
+
+
+</script>
+
+    
+</body>
+</html>

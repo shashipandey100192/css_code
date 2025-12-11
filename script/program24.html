@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1></h1>
+
+<script>
+var a = "kumar";
+console.log(a);
+console.log(typeof(a));
+
+var jheading = document.querySelector("h1");
+var b =new String(window.location.pathname);
+// var start=prompt("enter start value");
+// var end=prompt("enter stop value");
+
+// for(start;start<=end;start++)
+// {
+//     jheading.innerHTML+= b[start]
+// }
+
+console.log(b);
+console.log(typeof(b));
+
+var filename =b.split("/");
+var x = filename.length;
+var y = filename[x-1];
+
+jheading.innerHTML = y;
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

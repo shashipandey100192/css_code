@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="./images/img1.jpg" id="myimg" width="400" height="200">
+<input type="file" id="one">
+
+<input type="button" value="upload" onclick="abc()">
+
+
+<script>
+
+  var a = document.getElementById("one");
+function abc()
+{
+    var two = document.getElementById('myimg');
+  
+    var b = new String(a.value);
+    var c = b.replace("C:\\fakepath\\","./images/");
+    two.setAttribute("src",c);
+    console.log(c);
+}
+
+a.addEventListener("change",abc);
+
+
+</script>
+
+    
+</body>
+</html>
