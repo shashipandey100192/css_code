@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .userd
+        {
+            padding:10px;
+            display: inline-block;
+            background-color: green;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="run" onclick="xyz()">
+    <input type="button" value="phone" onclick="phonefor()">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+    <script>
+
+        class User {
+            constructor(name, phone, address) {
+                this.uname = name;
+                this.uphone = phone;
+                this.uaddress = address;
+                this.details = ()=>{
+                    return `<div class="userd">
+                        <p> userName: ${this.uname} </p>
+                        <p> userPhone: ${this.uphone} </p>
+                        <p> userAddress: ${this.uaddress} </p>
+                        </div>`;
+                };
+                this.indphone = ()=>{
+                    return `+91${this.uphone}`;
+                }
+                this.usphone = ()=>{
+                    return `+874${this.uphone}`;
+                }
+            
+            }
+        }
+
+        User.prototype.status="marrid";
+        User.prototype.age="50ft";
+
+
+
+
+
+        const emp = new User("ravi", "875454","noida","new dehi");
+
+        var jdiv = document.querySelectorAll("div");
+            jdiv[0].innerHTML=` 
+                <h2>user Name: ${emp.uname}</h2>
+                <h2>user Phone no: ${emp.uphone}</h2>
+                <h2>user address: ${emp.uaddress}</h2>
+                <h2>user status: ${emp.status}</h2>
+            `;
+
+function xyz()
+{
+    jdiv[1].innerHTML=emp.details();
+}
+
+function phonefor()
+{
+    jdiv[2].innerHTML = emp.usphone();
+}
+
+
+ 
+    </script>
+
+
+</body>
+
+</html>
