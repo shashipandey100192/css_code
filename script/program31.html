@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<select id="one"></select>
+
+<select id="two" disabled></select>
+
+    <script>
+
+// for(var a=1;a<=10;a++)
+// {
+//     console.log(a);
+// }
+
+// var a =1;
+// while(a<=10)
+// {
+//     console.log(a);
+//     a++;
+// }
+
+
+// var a =1;
+// do{
+//     console.log(a);
+//     a++;
+// }
+// while(a<=10)
+
+
+
+var a = document.getElementById("one");
+var c = document.getElementById('two');
+var b = 1;    
+for(b;b<=30;b++)
+{
+    a.innerHTML += `<option>${b}</option>`;
+}
+a.addEventListener("change",()=>{
+    c.innerHTML="";
+    c.removeAttribute("disabled");
+    var d = a.value;
+        for(d;d<=50;d++)
+        {
+            c.innerHTML += `<option>${d}</option>`;
+        }
+});
+
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>

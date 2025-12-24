@@ -5,6 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @media print{
+            input{
+                display: none;
+            }
+            table
+            {
+                width:80%;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -114,8 +126,15 @@ function printinvoice()
             <td>status:</td>
             <td>${idstatus}</td>
         </tr>
+         <tr>
+            <td colspan="2"><input type="button" value="print" onclick="printpage()"></td>
+        </tr>
         `;
 
+}
+function printpage()
+{
+    window.print();
 }
 
     </script>

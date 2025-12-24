@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mybox
+        {
+            width: 800px;
+            height: auto;
+            border:1px solid red;
+            padding:20px;
+            background-color: azure;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <input type="button" value="hidediv">
+        <input type="button" value="showdiv">
+        <input type="button" value="togglediv">
+    </div>
+
+    <div class="mybox">
+        The uncompressed version is best used during development or debugging; the compressed file saves bandwidth and
+        improves performance in production. You can download the source map file to help with debugging the compressed
+        production version. The source map is not required for end-users to run jQuery; it is a tool to help improve a
+        developer's debugging experience. As of jQuery 1.11/2.1, we no longer link source maps to compressed releases by
+        default.The uncompressed version is best used during development or debugging; the compressed file saves
+        bandwidth and improves performance in production. You can download the source map file to help with debugging
+        the compressed production version. The source map is not required for end-users to run jQuery; it is a tool to
+        help improve a developer's debugging experience. As of jQuery 1.11/2.1, we no longer link source maps to
+        compressed releases by default.The uncompressed version is best used during development or debugging; the
+        compressed file saves bandwidth and improves performance in production. You can download the source map file to
+        help with debugging the compressed production version. The source map is not required for end-users to run
+        jQuery; it is a tool to help improve a developer's debugging experience. As of jQuery 1.11/2.1, we no longer
+        link source maps to compressed releases by default.The uncompressed version is best used during development or
+        debugging; the compressed file saves bandwidth and improves performance in production. You can download the
+        source map file to help with debugging the compressed production version. The source map is not required for
+        end-users to run jQuery; it is a tool to help improve a developer's debugging experience. As of jQuery 1.11/2.1,
+        we no longer link source maps to compressed releases by default.
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $("input[value='hidediv']").click(function(){
+                $(".mybox").hide();
+            });
+
+            $("input[value='showdiv']").click(function(){
+                $(".mybox").show();
+            });
+
+            $("input[value='togglediv']").click(function(){
+                // $(".mybox").toggle("slow");
+                 $(".mybox").toggle(1000);
+                 var a = $(this).val();
+                 alert(a);
+            });
+
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
