@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.box{
+    width:500px;
+    height: auto;
+    border: 1px solid red;
+    padding:10px;
+    text-align: justify;
+}
+    </style>
+
+</head>
+
+<body>
+
+  <div class="box">
+    The Web (World Wide Web) is a system of interlinked documents and resources (pages, images, videos) accessed via the Internet, using URLs and hyperlinks to connect them, invented by Tim Berners-Lee in 1989 for information sharing. It's not the Internet itself, but a primary application built on it, allowing users to "surf" through websites using browsers, driven by protocols like HTTP and languages like HTMLThe Web (World Wide Web) is a system of interlinked documents and resources (pages, images, videos) accessed via the Internet, using URLs and hyperlinks to connect them, invented by Tim Berners-Lee in 1989 for information sharing. It's not the Internet itself, but a primary application built on it, allowing users to "surf" through websites using browsers, driven by protocols like HTTP and languages like HTMLThe Web (World Wide Web) is a system of interlinked documents and resources (pages, images, videos) accessed via the Internet, using URLs and hyperlinks to connect them, invented by Tim Berners-Lee in 1989 for information sharing. It's not the Internet itself, but a primary application built on it, allowing users to "surf" through websites using browsers, driven by protocols like HTTP and languages like HTML
+  </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+$(document).ready(function(){
+    $(".box").click(function(){
+        // $(this).fadeOut(8000,function(){
+        //     $(this).fadeIn(4000);
+        // });
+
+        // $(this).fadeTo(5000,0.5);
+
+        $(this).fadeTo(5000,0.5)
+        .css({color:'red'})
+        .hide(5000)
+        .show(3000);
+    });
+})
+
+
+
+    </script>
+</body>
+
+</html>
