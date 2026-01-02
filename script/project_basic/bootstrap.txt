@@ -1,0 +1,42 @@
+bootstrap(5)
+======================
+page
+===============
+	1) px 	1200px 		.container
+	2) %	100%		.container-fluid
+row
+===========
+	row
+color
+=============
+	primary
+	danger
+	info
+	warning
+	light
+	dark
+	success
+
+text color (text)
+========================
+	text-danger
+	text-success
+		    ...	
+background color (bg)
+=========================
+	bg-info
+	bg-danger
+		...
+heading
+================
+	h1
+	h2
+	 ... h6
+border
+===============
+	border(default)
+	border-info
+	border-top
+
+	
+	

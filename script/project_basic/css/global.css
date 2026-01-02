@@ -1,0 +1,19 @@
+.c-bg
+{
+    background:linear-gradient(rgb(175, 255, 175),rgb(90, 197, 90));
+}
+
+.card
+{
+     transition-duration: 200ms;
+}
+
+.card:hover
+{
+    transform: scale(1.1,1.1);
+    transition-duration: 200ms;
+}
+.c-margin
+{
+    margin-top:60px !important;
+}
